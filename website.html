@@ -1,0 +1,130 @@
+<!--  -->
+<!doctype html> 
+<html lang="uk"> 
+
+
+  <head> 
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <title>
+      Техпідтримка
+    </title> 
+    <link rel="stylesheet" href="style.css" /> 
+    <script src="app.js" defer></script>
+
+    <script src="app.js" defer></script>  
+  </head> 
+
+
+  <body class="body-overall-style"> 
+    <!-- Заявка -->
+    <p class="super-general-text">
+      <strong>Заявка в техпідтримку</strong>
+    </p>
+    <!-- ------------------Перша таблиця-------------------- -->
+    <div class="table-fill">
+      <p class="general-text">
+        Створити нову заявку
+      </p>
+
+
+    <form id="createForm">
+
+
+    <div class="table-fill-segment2">
+      <label for="purpose-of-visit" class="tema">
+        Тема
+      </label>
+      <input class="text" id="purpose-of-visit">
+    </div>
+
+    <!-- Пріорітет -->
+    <div class="table-fill-segment2">
+      <label for="prioritySelect" class="priority-Select">
+        Пріоритет
+      </label>
+        <select id="prioritySelect" required class="priority-Select-choose">
+          <option value="">Оберіть пріоритет</option>
+          
+          <option value="Low">Низький</option>
+          <option value="Medium">Середній</option>
+          <option value="High">Високий</option>
+        </select>
+    </div>
+
+    <!-- Статус роботи  -->
+    <div class="table-fill-segment3">
+      <label for="statusSelect" class="status-Select">
+        Статус
+      </label>
+        <select id="statusSelect" required class="status-Select-choose">
+          <option value="">Оберіть статус</option>
+          
+          <option value="New">Нова</option>
+          <option value="In-work">В роботі</option>
+          <option value="Done">Вирішена</option>
+        </select>
+    </div>
+
+    <!-- Автор  -->
+     <div class="table-fill-segment4">
+      <label for="author" class="author-text-name">
+        Автор
+      </label>
+      <input class="text" id="author">
+    </div>
+
+
+     <div class="table-fill-description">
+      <label for="description" class="description1">
+        Коментар
+      </label>
+        <textarea id="description" name="description-result" rows="5" cols="33" class="description-text"></textarea>
+    </div>
+
+    <div class="buttons">
+    <button type="submit" class="button-add">
+      Додати
+    </button>
+    <button type="button" class="button-clear">
+      Очистити
+    </button>
+    </div>
+
+    </form>
+
+    </div>
+
+
+    <!-- ------------------Друга таблиця------------------ -->
+    <div class="table-info">
+      <p class="table-fill-general-text">
+        Список заявок
+      </p>
+      
+      <table id="ticketsTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Тема</th>
+            <th>Пріоритет</th>
+            <th>Статус</th>
+            <th>Автор</th>
+            
+            <th>Коментар</th><th>Дії</th>
+          </tr>
+        </thead>
+        <tbody id="ticketsTableBody">
+          </tbody>
+      </table>
+    </div>
+
+    
+ 
+
+  </body>
+  
+  
+</html> 
+
+
