@@ -1,0 +1,182 @@
+<!--  -->
+<!doctype html> 
+<html lang="uk"> 
+
+
+  <head> 
+    <meta charset="utf-8" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> 
+    <title>
+      Техпідтримка
+    </title> 
+    <link rel="stylesheet" href="style.css" /> 
+    <script type="module" src="app.js" defer></script>
+
+     
+  </head> 
+
+
+  <body class="body-overall-style"> 
+    <!-- Заявка -->
+    <p class="super-general-text">
+      <strong>Заявка в техпідтримку</strong>
+    </p>
+
+    
+    <!-- ------------------Перша таблиця-------------------- -->
+    <div class="table-fill">
+  <p class="general-text">
+    Створити нову заявку
+  </p>
+
+  <form id="createForm">
+
+    <div class="table-fill-segment2">
+      <label for="purpose-of-visit" class="tema">
+        Тема
+      </label>
+      <input class="text" id="purpose-of-visit" type="text">
+      <p class="error-text" id="theme-error"></p> 
+    </div>
+
+    <div class="table-fill-segment2">
+      <label for="prioritySelect" class="priority-Select">
+        Пріоритет
+      </label>
+      <select id="prioritySelect" class="priority-Select-choose">
+        <option value="">Оберіть пріоритет</option>
+        <option value="Low">Низький</option>
+        <option value="Medium">Середній</option>
+        <option value="High">Високий</option>
+      </select>
+      <p class="error-text" id="priority-error"></p> 
+    </div>
+
+    <div class="table-fill-segment3">
+      <label for="statusSelect" class="status-Select">Статус</label>
+      <select id="statusSelect" class="status-Select-choose">
+        <option value="">Оберіть статус</option>
+        <option value="new">Нова</option>
+        <option value="in_progress">В роботі</option>
+        <option value="done">Вирішена</option>
+      </select>
+      <p class="error-text" id="status-error"></p> 
+    </div>
+
+    <div class="table-fill-segment4">
+      <label for="author" class="author-text-name">
+        Автор
+      </label>
+      <select id="author" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+        <option value="" disabled selected>Завантаження авторів...</option>
+      </select>
+      <p class="error-text" id="author-error"></p> 
+    </div>
+
+    <div class="table-fill-description">
+      <label for="description" class="description1">
+        Коментар
+      </label>
+      <textarea id="description" rows="5" class="description-text"></textarea>
+      <p class="error-text" id="description-error"></p> 
+    </div>
+
+    <div class="buttons">
+      <button type="submit" class="button-add">
+        Додати
+      </button>
+      <button type="button" class="button-clear">
+        Очистити
+      </button>
+    </div>
+
+  </form>
+</div>
+
+
+    <!-- ------------------Друга таблиця------------------ -->
+
+    
+
+    <div class="table-info">
+      <p class="table-fill-general-text">
+        Список заявок
+      </p>
+      
+      <table id="ticketsTable">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Тема</th>
+            <th>Пріоритет</th>
+            <th>Статус</th>
+            <th>Автор</th>
+            
+            <th>Опис</th><th>Дії</th>
+          </tr>
+        </thead>
+        <tbody id="ticketsTableBody">
+          </tbody>
+      </table>
+    </div>
+
+    
+ 
+
+    <!-- ------------------ Автори ------------------ -->
+    <hr class="section-divider">
+
+<div class="extra-forms-container">
+  
+  <div class="form-card">
+    <h3>Створити нового автора</h3>
+    <form id="createUserForm">
+      <div class="input-group">
+        <label for="newUserName">Ім'я:</label>
+        <input type="text" id="newUserName" required>
+      </div>
+      
+      <div class="input-group">
+        <label for="newUserEmail">Email:</label>
+        <input type="email" id="newUserEmail" required>
+      </div>
+      
+      <button type="submit" class="button-add">Додати автора</button>
+    </form>
+  </div>
+
+  <div class="form-card">
+    <h3>Додати коментар до заявки</h3>
+    <form id="createCommentForm">
+      <div class="input-group">
+        <label for="commentTicketId">ID Заявки (до якої пишемо):</label>
+        <input type="number" id="commentTicketId" required>
+      </div>
+      
+      <div class="input-group">
+        <label for="commentAuthorId">ID Автора (хто пише):</label>
+        <input type="number" id="commentAuthorId" required>
+      </div>
+      
+      <div class="input-group">
+        <label for="commentBody">Текст коментаря:</label>
+        <textarea id="commentBody" required></textarea>
+      </div>
+      
+      <button type="submit" class="button-add">Залишити коментар</button>
+    </form>
+  </div>
+
+</div>
+
+</div>
+
+<div id="notice" class="system-notice"></div>
+    <script type="module" src="app.js"></script>
+</body>
+  </body>
+  
+  
+</html> 
+
+
